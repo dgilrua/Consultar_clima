@@ -3,7 +3,7 @@ import useClima from '../hooks/useClima'
 
 const Formulario = () => {
 
-    const {datosBusqueda, datos} = useClima()
+    const {datosBusqueda, datos, llamadoApi} = useClima()
 
     const [alerta, setAlerta] = useState('')
 
@@ -15,6 +15,7 @@ const Formulario = () => {
             return
         }
 
+        llamadoApi()
         setAlerta('')
     }
 
